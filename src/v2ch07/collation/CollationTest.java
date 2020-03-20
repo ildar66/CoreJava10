@@ -59,7 +59,7 @@ class CollationFrame extends JFrame
       add(newWord, new GBC(1, 3).setFill(GBC.HORIZONTAL));
       add(new JScrollPane(sortedWords), new GBC(0, 4, 2, 1).setFill(GBC.BOTH));
       
-      locales = (Locale[]) Collator.getAvailableLocales().clone();
+      locales = Collator.getAvailableLocales().clone();
       Arrays.sort(locales, (l1, l2) -> collator.compare(l1.getDisplayName(), l2.getDisplayName()));               
       for (Locale loc : locales)
          localeCombo.addItem(loc.getDisplayName());      
