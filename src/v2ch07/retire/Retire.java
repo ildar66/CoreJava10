@@ -48,7 +48,7 @@ class RetireFrame extends JFrame
    private JLabel inflationPercentLabel = new JLabel();
    private JLabel investPercentLabel = new JLabel();
    private RetireInfo info = new RetireInfo();
-   private Locale[] locales = { Locale.US, Locale.CHINA, Locale.GERMANY };
+   private Locale[] locales = { Locale.US, Locale.CHINA, Locale.GERMANY, Locale.getDefault() };
    private Locale currentLocale;
    private JComboBox<Locale> localeCombo = new LocaleCombo(locales);
    private ResourceBundle res;
@@ -126,8 +126,8 @@ class RetireFrame extends JFrame
       localeCombo.setLocale(currentLocale);
       localeCombo.setSelectedItem(currentLocale);
 
-      res = ResourceBundle.getBundle("retire.RetireResources", currentLocale);
-      resStrings = ResourceBundle.getBundle("retire.RetireStrings", currentLocale);
+      res = ResourceBundle.getBundle("v2ch07.retire.RetireResources", currentLocale);
+      resStrings = ResourceBundle.getBundle("v2ch07.retire.RetireStrings", currentLocale);
       currencyFmt = NumberFormat.getCurrencyInstance(currentLocale);
       numberFmt = NumberFormat.getNumberInstance(currentLocale);
       percentFmt = NumberFormat.getPercentInstance(currentLocale);
