@@ -41,6 +41,9 @@ public class ButtonFrame extends JFrame
    public void yellowBackground()
    {
       panel.setBackground(Color.YELLOW);
+      panel.remove(yellowButton);
+      System.out.println("SwingUtilities.isEventDispatchThread()? = " + SwingUtilities.isEventDispatchThread());
+      // pack();
    }
 
    @ActionListenerFor(source = "blueButton")
@@ -52,6 +55,7 @@ public class ButtonFrame extends JFrame
    @ActionListenerFor(source = "redButton")
    public void redBackground()
    {
-      panel.setBackground(Color.RED);
+//      panel.setBackground(Color.RED);
+      panel.setBackground(Color.BLACK);
    }
 }
