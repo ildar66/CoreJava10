@@ -12,7 +12,7 @@ public class ToStrings {
     }
     public static String toString(v2ch08.rect.Rectangle obj) {
         StringBuilder result = new StringBuilder();
-        result.append("rect.Rectangle");
+        result.append("v2ch08.rect.Rectangle");
         result.append("[");
         result.append(toString(obj.getTopLeft()));
         result.append(",");
