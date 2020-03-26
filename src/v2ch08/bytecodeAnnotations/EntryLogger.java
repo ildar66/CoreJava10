@@ -36,7 +36,7 @@ public class EntryLogger extends ClassVisitor {
                 return new AnnotationVisitor(Opcodes.ASM5) {
 
                     public void visit(String name, Object value) {
-                        if (desc.equals("LbytecodeAnnotations/LogEntry;") && name.equals("logger"))
+                        if (desc.equals("Lv2ch08/bytecodeAnnotations/LogEntry;") && name.equals("logger"))
                             loggerName = value.toString();
                     }
                 };
