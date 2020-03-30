@@ -1,0 +1,12 @@
+grant // codebase "file:login.jar"
+{    
+   permission javax.security.auth.AuthPermission "createLoginContext.Login1";
+   // permission javax.security.auth.AuthPermission "createLoginContext.other";
+   permission javax.security.auth.AuthPermission "doAsPrivileged";
+};
+
+// grant principal com.sun.security.auth.UnixPrincipal "harry"
+grant principal com.sun.security.auth.NTUserPrincipal "User"
+{
+   permission java.util.PropertyPermission "user.*", "read";
+};
