@@ -6,6 +6,7 @@ import java.security.*;
 
 /**
  * This program computes the message digest of a file.
+ *
  * @author Cay Horstmann
  * @version 1.20 2012-06-16
  */
