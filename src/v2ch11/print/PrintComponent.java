@@ -18,9 +18,9 @@ public class PrintComponent extends JComponent implements Printable
       drawPage(g2);
    }
 
-   public int print(Graphics g, PageFormat pf, int page) throws PrinterException
+   public int print(Graphics g, PageFormat pf, int pageIndex) throws PrinterException
    {
-      if (page >= 1) return Printable.NO_SUCH_PAGE;
+      if (pageIndex >= 1) return Printable.NO_SUCH_PAGE;
       Graphics2D g2 = (Graphics2D) g;
       g2.translate(pf.getImageableX(), pf.getImageableY());
       g2.draw(new Rectangle2D.Double(0, 0, pf.getImageableWidth(), pf.getImageableHeight()));
