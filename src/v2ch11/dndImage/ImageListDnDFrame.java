@@ -22,15 +22,17 @@ public class ImageListDnDFrame extends JFrame {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
         //list1 = new ImageList(Paths.get(getClass().getPackage().getName(), "images1"));
-        Path dir1 = Paths.get(System.getProperty("user.home"), "git", "CoreJava10", "src", "v2ch11", "dndImage", "images1");
-        list1 = new ImageList(dir1);
+        list1 = new ImageList(getPathFor("images1"));
         //list2 = new ImageList(Paths.get(getClass().getPackage().getName(), "images2"));
-        Path dir2 = Paths.get(System.getProperty("user.home"), "git", "CoreJava10", "src", "v2ch11", "dndImage", "images2");
-        list2 = new ImageList(dir2);
+        list2 = new ImageList(getPathFor("images2"));
 
         setLayout(new GridLayout(2, 1));
         add(new JScrollPane(list1));
         add(new JScrollPane(list2));
+    }
+
+    private Path getPathFor(String folder) {
+        return Paths.get(System.getProperty("user.home"), "git", "CoreJava10", "src", "v2ch11", "dndImage", folder);
     }
 }
 
